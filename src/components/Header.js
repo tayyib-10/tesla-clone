@@ -15,13 +15,13 @@ function Header() {
 
       <Menu>
         {cars && cars.map((car, index) => {
-          <a key={index}href="#">{car}</a>
+          <a key={index}href="/#">{car}</a>
         })}
       </Menu>
 
       <RightMenu>
-        <a href="#">Shop</a>
-        <a href="#">Tesla Account</a>
+        <a href="/#">Shop</a>
+        <a href="/#">Tesla Account</a>
         <CustomMenu src="/images/hamburgerMenu.svg" onClick={() => setBurgerStatus(true)}/>
       </RightMenu>
 
@@ -29,14 +29,14 @@ function Header() {
         <CustomCloseWrapper>
           <CustomClose src="/images/close-icon.svg" onClick={() => setBurgerStatus(false)}/>
         </CustomCloseWrapper>
-        <li><a href='#'>Model S</a></li>
-        <li><a href='#'>Model 3</a></li>
-        <li><a href='#'>Model X</a></li>
-        <li><a href='#'>Model Y</a></li>
-        <li><a href='#'>Used Inventory</a></li>
-        <li><a href='#'>Trade-in</a></li>
-        <li><a href='#'>Cybertruck</a></li>
-        <li><a href='#'>Roadster</a></li>
+        <li><a href='/#'>Model S</a></li>
+        <li><a href='/#'>Model 3</a></li>
+        <li><a href='/#'>Model X</a></li>
+        <li><a href='/#'>Model Y</a></li>
+        <li><a href='/#'>Used Inventory</a></li>
+        <li><a href='/#'>Trade-in</a></li>
+        <li><a href='/#'>Cybertruck</a></li>
+        <li><a href='/#'>Roadster</a></li>
       </BurgerNav>
     </Container>
   );
