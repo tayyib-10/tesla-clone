@@ -1,26 +1,30 @@
 import React from 'react'
 import styled from 'styled-components'
+import Fade from 'react-reveal/Fade'
 
 function Section(props) {
     return (
         <Wrap bgImage={props.backgroundImage}>
-            <ItemText>
-                <h1>{props.model}</h1>
-                <p>{props.description}</p>
-            </ItemText>
+            <Fade bottom>
+                <ItemText>
+                    <h1>{props.model}</h1>
+                    <p>{props.description}</p>
+                </ItemText>
+            </Fade>
             <Buttons>
-                <ButtonGroup>
-                    <LeftButton>
-                    Custom Order
-                    </LeftButton>
-                    
-                    {props.rightButton && 
-                        <RightButton>
-                            {props.rightButton}
-                        </RightButton>
-                    }
-                    
-                </ButtonGroup>
+                <Fade bottom>
+                    <ButtonGroup>
+                        <LeftButton>
+                        Custom Order
+                        </LeftButton>
+                        
+                        {props.rightButton && 
+                            <RightButton>
+                                {props.rightButton}
+                            </RightButton>
+                        }
+                    </ButtonGroup>
+                </Fade>
                 <DownArrow src="/images/down-arrow.svg"/>
             
             </Buttons>
@@ -30,6 +34,7 @@ function Section(props) {
 }
 
 const Wrap = styled.div`
+    z-index: 10;
     width:100vw;
     height: 100vh;
     background-image: ${props => `url(/images/${props.bgImage})`};
